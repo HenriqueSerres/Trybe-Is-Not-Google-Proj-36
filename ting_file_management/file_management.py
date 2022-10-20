@@ -1,11 +1,11 @@
 import sys
 
 
-def txt_importer(path_file):           
+def txt_importer(path_file):
     if not path_file.endswith(".txt"):
         print("Formato inválido", file=sys.stderr)
     try:
-        with open(path_file, "r") as arquivo: 
+        with open(path_file, "r") as arquivo:
             content = arquivo.read()
             return content.splitlines()
     except FileNotFoundError:
